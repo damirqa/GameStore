@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Pages\Listing.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +83,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Repository\EFDbContext.cs" />
+    <Compile Include="Models\Repository\Repository.cs" />
+    <Compile Include="Pages\Listing.aspx.cs">
+      <DependentUpon>Listing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Listing.aspx.designer.cs">
+      <DependentUpon>Listing.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -97,7 +107,6 @@
     <Folder Include="App_Start\" />
     <Folder Include="Content\" />
     <Folder Include="Controls\" />
-    <Folder Include="Models\Repository\" />
     <Folder Include="Pages\Admin\" />
     <Folder Include="Pages\Helpers\" />
     <Folder Include="Scripts\" />
